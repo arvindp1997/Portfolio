@@ -1,4 +1,9 @@
-export default function SkillCard({ title, skills, bgClass }) {
+interface SkillCardProps {
+    title: string;
+    skills: string[];
+    bgClass: string;
+  }
+export default function SkillCard({ title, skills, bgClass }: SkillCardProps) {
   return (
     <div
       className={`bg-gradient-to-r ${bgClass} rounded-lg p-5 shadow-lg min-h-[100px]`}

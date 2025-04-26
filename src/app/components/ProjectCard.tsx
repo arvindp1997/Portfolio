@@ -1,4 +1,15 @@
-export default function ProjectCard({ project }) {
+type Project = {
+    title: string;
+    description: string;
+    tech: string[];
+    demoLink: string;
+    codeLink: string;
+  };
+  
+  interface ProjectCardProps {
+    project: Project;
+  }
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-700 rounded-lg p-6 shadow-lg hover:shadow-md    overflow-hidden  transition duration-300 transform hover:-translate-y-2">
       <div className="h-48 bg-gradient-to-r from-gray-960 to-gray-600 flex items-center justify-center p-6">

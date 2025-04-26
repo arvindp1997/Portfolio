@@ -1,4 +1,18 @@
-export default function ExperienceCard({ job }) {
+type Job = {
+    role: string;
+    company: string;
+    location: string;
+    period: string;
+    client?: string;
+    project?: string;
+    description?: string;
+    tech: string[];
+  };
+  
+  interface ExperienceCardProps {
+    job: Job;
+  }
+export default function ExperienceCard({ job }: ExperienceCardProps) {
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-700 rounded-lg p-6 shadow-lg hover:shadow-md transition duration-300">
       <div className="flex flex-wrap justify-between items-start mb-3">

@@ -1,4 +1,15 @@
-export default function EducationCard({ education }) {
+type Education = {
+    degree: string;
+    institution: string;
+    location: string;
+    year: string;
+    score?: string;
+  };
+  
+  interface EducationCardProps {
+    education: Education;
+  }; 
+export default function EducationCard({ education }: EducationCardProps) {
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-700 rounded-lg p-6 shadow-lg hover:shadow-md transition duration-300">
       <div className="flex flex-wrap justify-between items-start mb-3">

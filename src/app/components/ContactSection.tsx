@@ -31,7 +31,6 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
 
     try {
       await emailjs.sendForm(
