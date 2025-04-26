@@ -9,7 +9,7 @@ export default function ProfileSidebar() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-800 to-gray-600  md:w-1/4 p-6 text-white max-h-[920px] ">
+    <div className="bg-gradient-to-r from-gray-800 to-gray-600  w-full p-6 text-white h-full ">
       <div className="flex flex-col items-center mb-6">
         <div className="w-32 h-32 bg-gray-500 rounded-full mb-4 flex items-center justify-center">
           <Image
@@ -104,7 +104,7 @@ export default function ProfileSidebar() {
 
       <button
         onClick={handleDownload}
-        className="w-full shadow-sm bg-white text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-100 transition duration-300"
+        className="w-[150px] shadow-sm bg-white text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-100 transition duration-300"
       >
         Download CV
       </button>

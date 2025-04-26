@@ -15,12 +15,15 @@ export default function PortfolioApp() {
       <div className=" mx-auto bg-gray-600  shadow-lg overflow-hidden">
         <div className="flex flex-col md:flex-row">
           {/* Profile Sidebar Component */}
+          <div className=" md:w-1/4">
           <ProfileSidebar />
+          </div>
+         
 
           {/* Main Content Section */}
-          <div className="md:w-3/4 p-6">
+          <div className="w-full p-6 md:w-3/4">
             <div className="border-b border-gray-200 mb-6">
-              <nav className="flex space-x-8">
+              <nav className="flex flex-row gap-8">
                 <button
                   onClick={() => setActiveTab("about-me")}
                   className={`pb-4 px-1 font-medium text-sm ${
