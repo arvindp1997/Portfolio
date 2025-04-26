@@ -34,9 +34,7 @@ export default function HeroSection({setActiveTab}: {setActiveTab: (val: string)
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Building exceptional user experiences with modern web technologies.
-            Specializing in React ecosystem, frontend architecture, and UI/UX
-            optimization.
+           I'm a Senior Frontend Engineer specializing in building scalable, high-performance web applications. With a passion for clean code, pixel-perfect UI, and intuitive user experiences, I transform ideas into reliable digital products. I focus on React, Next.js, TypeScript, and modern web technologies.
           </motion.p>
 
           <motion.div
