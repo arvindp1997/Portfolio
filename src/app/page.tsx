@@ -93,32 +93,32 @@ export default function PortfolioApp() {
              <div className="absolute bottom-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
 
               {activeTab === "about-me" && (
-                <div className="h-full ">
+                <div className="h-full overflow-y-scroll custom-scrollbar">
                   <HeroSection setActiveTab={setActiveTab} />
                 </div>
               )}
               {activeTab === "skills" && (
-                <div className="h-full overflow-y-scroll">
+                <div className="h-full overflow-y-scroll custom-scrollbar">
                   <SkillsSection />
                 </div>
               )}
               {activeTab === "experience" && (
-                <div className="h-full overflow-y-scroll">
+                <div className="h-full overflow-y-scroll custom-scrollbar">
                   <ExperienceSection />
                 </div>
               )}
               {activeTab === "projects" && (
-                <div className="h-full overflow-y-scroll">
+                <div className="h-full overflow-y-scroll custom-scrollbar">
                   <ProjectsSection />
                 </div>
               )}
               {activeTab === "education" && (
-                <div className="h-full ">
+                <div className="h-full overflow-y-scroll custom-scrollbar ">
                   <EducationSection />
                 </div>
               )}
               {activeTab === "contact" && (
-                <div className="h-full">
+                <div className="h-full overflow-y-scroll custom-scrollbar">
                   <ContactSection />
                 </div>
               )}
