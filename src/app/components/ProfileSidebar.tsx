@@ -1,5 +1,13 @@
 import Image from "next/image";
+
 export default function ProfileSidebar() {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/CV.pdf'; // path to your CV file in the public folder
+    link.download = 'Aravind_Pandit_UpdatedCV.pdf'; // specify the file name
+    link.click();
+  };
+
   return (
     <div className="bg-gradient-to-r from-gray-800 to-gray-600  md:w-1/4 p-6 text-white max-h-[920px] ">
       <div className="flex flex-col items-center mb-6">
@@ -94,7 +102,10 @@ export default function ProfileSidebar() {
         </div>
       </div>
 
-      <button className="w-full shadow-sm bg-white text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-100 transition duration-300">
+      <button
+        onClick={handleDownload}
+        className="w-full shadow-sm bg-white text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-indigo-100 transition duration-300"
+      >
         Download CV
       </button>
     </div>
