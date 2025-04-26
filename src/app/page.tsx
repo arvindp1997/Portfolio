@@ -98,7 +98,7 @@ export default function PortfolioApp() {
                 </div>
               )}
               {activeTab === "skills" && (
-                <div className="h-full">
+                <div className="h-full overflow-y-scroll">
                   <SkillsSection />
                 </div>
               )}

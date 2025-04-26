@@ -33,13 +33,13 @@ export default function SkillsSection() {
   };
 
   return (
-    <div className="min-h-[800px] p-4 bg-gradient-to-r from-gray-800 to-gray-600">
-      <h2 className="text-2xl font-bold text-gray-100 mb-6">
+    <div className="min-h-screen p-4 sm:p-6 md:p-10 bg-gradient-to-r from-gray-800 to-gray-600">
+      <h2 className="text-xl sm:text-2xl font-bold text-gray-100 mb-6">
         Technical Expertise
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {[
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[ 
           { title: "Languages", skills: skills.languages },
           { title: "Frontend Technologies", skills: skills.frontendTech },
           { title: "State Management", skills: skills.stateManagement },
@@ -62,8 +62,9 @@ export default function SkillsSection() {
           </motion.div>
         ))}
       </div>
+
       <motion.div
-        className="md:w-2/3"
+        className="w-full md:w-2/3 mt-12"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -74,11 +75,11 @@ export default function SkillsSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
         >
-          <div className="mt-8">
-            <h2 className="text-2xl font-bold text-gray-100 mb-6">
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-100 mb-4">
               Professional Overview
             </h2>
-            <p className="text-gray-50 leading-relaxed">
+            <p className="text-gray-50 text-base sm:text-lg leading-relaxed">
               A passionate Senior Frontend Engineer with 5+ years of experience
               building scalable web applications. Specialized in React ecosystem
               with strong expertise in TypeScript, modern state management
