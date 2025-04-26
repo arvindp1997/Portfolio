@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function HeroSection() {
+export default function HeroSection({setActiveTab}: {setActiveTab: (val: string) => void}) {
   return (
     <section className="bg-gradient-to-r from-gray-800 to-gray-600 h-full text-white flex items-center">
       <div className="container mx-auto px-6 py-24 md:py-32 relative z-10">
@@ -47,12 +47,14 @@ export default function HeroSection() {
           >
             <a
               href="#contact"
+              onClick={() => setActiveTab("contact")}
               className="px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg shadow-lg hover:bg-indigo-50 transform hover:-translate-y-1 transition duration-300"
             >
               Get In Touch
             </a>
             <a
               href="#projects"
+              onClick={() => setActiveTab("projects")}
               className="px-8 py-3 bg-transparent shadow-lg border-2 border-white text-white font-semibold rounded-lg hover:bg-opacity-10 transform hover:-translate-y-1 transition duration-300"
             >
               View My Work

@@ -90,7 +90,7 @@ export default function PortfolioApp() {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
               {activeTab === "about-me" && (
                 <div className="h-full ">
-                  <HeroSection />
+                  <HeroSection setActiveTab={setActiveTab} />
                 </div>
               )}
               {activeTab === "skills" && (

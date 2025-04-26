@@ -8,24 +8,24 @@ export default function ProjectsSection() {
       description:
         "Built a custom CMS similar to Contentful for Bravo Savings Network, enabling teams to manage deals and merchant data with 70% reduction in manual overhead.",
       tech: ["React", "TypeScript", "Apollo GraphQL", "Tailwind CSS"],
-      demoLink: "#",
-      codeLink: "#",
+      demoLink: "https://www.bravo-savings-network.com/",
+      codeLink: "https://www.bravo-savings-network.com/",
     },
     {
       title: "Tiptap Micro-Frontend Editor",
       description:
         "Enhanced and maintained a rich text editor as a micro-frontend that can be embedded in host applications for enterprise clients.",
       tech: ["React", "TypeScript", "MFE", "Jest", "Cypress"],
-      demoLink: "#",
-      codeLink: "#",
+      demoLink: "https://www.simpplr.com/",
+      codeLink: "https://www.simpplr.com/",
     },
     {
       title: "Interactive Dashboard",
       description:
         "Developed data visualization dashboard for Johnson Controls featuring various chart types to present insights from building equipment datasets.",
       tech: ["React", "Chart.js", "Recharts", "Node.js", "MongoDB"],
-      demoLink: "#",
-      codeLink: "#",
+      demoLink: "https://www.johnsoncontrols.com/",
+      codeLink: "https://www.johnsoncontrols.com/",
     },
     {
       title: "Web Admin Portal",

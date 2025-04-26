@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
 
 export default function ContactSection() {
   const formVariants = {
@@ -26,6 +27,38 @@ export default function ContactSection() {
     }),
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    // Collect form values
+    const formValues = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+    
+    try {
+      // Send the email using EmailJS
+      const result = await emailjs.sendForm(
+        "service_qbpbefi", // replace with your EmailJS service ID
+        "template_av33rp8", // replace with your template ID
+        form, // pass the form as the form argument
+        "0faV6On2qEY_gB4j9" // replace with your EmailJS user ID
+      );
+      
+    
+
+      alert("Message sent successfully!");
+      form.reset(); // Reset form fields after submission
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Error sending message, please try again later.");
+    }
+  };
+
   return (
     <section className="bg-gradient-to-r from-gray-800 to-gray-600 p-4 h-full">
       <div className="container mx-auto relative z-10 pt-6 pl-6 pr-6 pb-18">
@@ -46,13 +79,14 @@ export default function ContactSection() {
           viewport={{ once: true, amount: 0.3 }}
           variants={formVariants}
         >
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <motion.div variants={inputVariants} custom={0}>
               <label htmlFor="name" className="block mb-2 text-sm font-medium">
                 Name
               </label>
               <input
                 type="text"
+                name="name"
                 id="name"
                 className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 placeholder="Your Name"
@@ -66,6 +100,7 @@ export default function ContactSection() {
               </label>
               <input
                 type="email"
+                name="email"
                 id="email"
                 className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 placeholder="you@example.com"
@@ -81,6 +116,7 @@ export default function ContactSection() {
                 Message
               </label>
               <textarea
+                name="message"
                 id="message"
                 rows="5"
                 className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"

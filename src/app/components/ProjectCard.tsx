@@ -37,6 +37,8 @@ export default function ProjectCard({ project }) {
         <div className="flex gap-4">
           <a
             href={project.demoLink}
+            target="blank"
+          
             className="inline-flex items-center px-4 py-2 bg-gray-600 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition duration-300"
           >
             Live Demo
@@ -56,6 +58,7 @@ export default function ProjectCard({ project }) {
           </a>
           <a
             href={project.codeLink}
+            target="blank"
             className="inline-flex items-center px-4 py-2 bg-white text-gray-900 text-sm font-medium rounded-md border border-gray-600 hover:bg-indigo-50 transition duration-300"
           >
             Source Code
