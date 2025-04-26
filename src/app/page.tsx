@@ -23,10 +23,10 @@ export default function PortfolioApp() {
           {/* Main Content Section */}
           <div className="w-full p-6 md:w-3/4">
             <div className="border-b border-gray-200 mb-6">
-              <nav className="flex flex-row gap-8">
-                <button
+            <nav className="flex flex-row gap-8 overflow-x-auto no-scrollbar">
+            <button
                   onClick={() => setActiveTab("about-me")}
-                  className={`pb-4 px-1 font-medium text-sm ${
+                  className={`pb-4 px-1 font-medium text-sm whitespace-nowrap ${
                     activeTab === "about-me"
                       ? "text-gray-200 border-b-2 border-white"
                       : "text-gray-100 hover:text-gray-400"
