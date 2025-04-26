@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 
 export default function ExperienceSection() {
@@ -9,14 +10,7 @@ export default function ExperienceSection() {
       location: "Gurgaon - Onsite",
       client: "Mckinsey & Company",
       project: "Source AI project",
-      tech: [
-        "ReactJs",
-        "NextJs",
-        "TypeScript",
-        "Javascript",
-        "Jest",
-        "Cypress",
-      ],
+      tech: ["ReactJs", "NextJs", "TypeScript", "Javascript", "Jest", "Cypress"],
     },
     {
       role: "Software Engineer",
@@ -77,23 +71,36 @@ export default function ExperienceSection() {
     },
   ];
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
-    <div className=" bg-gradient-to-r from-gray-800 to-gray-600 p-4 ">
+    <div className="bg-gradient-to-r from-gray-800 to-gray-600 p-4">
       <h2 className="text-2xl font-bold text-gray-100 mb-6">Work Experience</h2>
 
       <div className="space-y-6">
         {experience.map((job, index) => (
-          <ExperienceCard key={index} job={job} />
+          <motion.div
+            key={index}
+            custom={index}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardVariants}
+          >
+            <ExperienceCard job={job} />
+          </motion.div>
         ))}
-
-        {/* <div className="flex justify-center mt-6">
-            <button className="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
-              View More
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-          </div> */}
       </div>
     </div>
   );
