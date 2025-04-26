@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
+import { toast, Toaster } from "react-hot-toast"; // ➡️ Import toast
 
 export default function ContactSection() {
   const formVariants = {
@@ -29,38 +30,28 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
-    
-    // Collect form values
-    const formValues = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    };
-    
-    try {
-      // Send the email using EmailJS
-      const result = await emailjs.sendForm(
-        "service_qbpbefi", // replace with your EmailJS service ID
-        "template_av33rp8", // replace with your template ID
-        form, // pass the form as the form argument
-        "0faV6On2qEY_gB4j9" // replace with your EmailJS user ID
-      );
-      
-    
 
-      alert("Message sent successfully!");
-      form.reset(); // Reset form fields after submission
+    try {
+      await emailjs.sendForm(
+        "service_qbpbefi",
+        "template_av33rp8",
+        form,
+        "0faV6On2qEY_gB4j9"
+      );
+
+      toast.success("Message sent successfully! 🚀"); // ➡️ Show success toast
+      form.reset();
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("Error sending message, please try again later.");
+      toast.error("Error sending message, please try again later."); // ➡️ Show error toast
     }
   };
 
   return (
     <section className="bg-gradient-to-r from-gray-800 to-gray-600 p-4 h-full">
+      <Toaster position="top-right" reverseOrder={false} /> {/* ➡️ Add Toaster */}
       <div className="container mx-auto relative z-10 pt-6 pl-6 pr-6 pb-18">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-50">
@@ -118,7 +109,7 @@ export default function ContactSection() {
               <textarea
                 name="message"
                 id="message"
-                rows="5"
+                rows={5}
                 className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 placeholder="Write your message here..."
                 required
