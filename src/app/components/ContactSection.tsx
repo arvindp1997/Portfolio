@@ -35,10 +35,10 @@ export default function ContactSection() {
 
     try {
       await emailjs.sendForm(
-        "service_qbpbefi",
-        "template_av33rp8",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         form,
-        "0faV6On2qEY_gB4j9"
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
       );
 
       toast.success("Message sent successfully! 🚀"); // ➡️ Show success toast
