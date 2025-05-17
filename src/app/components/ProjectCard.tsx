@@ -11,8 +11,8 @@ type Project = {
   }
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-gradient-to-r from-gray-900 to-gray-700 rounded-lg p-6 shadow-lg hover:shadow-md    overflow-hidden  transition duration-300 transform hover:-translate-y-2">
-      <div className="h-48 bg-gradient-to-r from-gray-960 to-gray-600 flex items-center justify-center p-6">
+    <div className="bg-gradient-to-r from-blue-800 to-blue-700 rounded-lg p-6 shadow-lg hover:shadow-md    overflow-hidden  transition duration-300 transform hover:-translate-y-2">
+      <div className="h-48 bg-gradient-to-r from-blue-960 to-blue-600 flex items-center justify-center p-6">
         <svg
           className="w-20 h-20 text-white opacity-75"
           fill="none"
@@ -50,7 +50,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.demoLink}
             target="blank"
           
-            className="inline-flex items-center px-4 py-2 bg-gray-600 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition duration-300"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition duration-300"
           >
             Live Demo
             <svg

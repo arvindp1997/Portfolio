@@ -42,7 +42,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-gray-800 to-gray-600 p-4 sm:p-6 md:p-8 min-h-screen flex items-center justify-center">
+    <section className="bg-gradient-to-r form-blue-800 to-blue-600 p-4 sm:p-6 md:p-8 min-h-screen flex items-center justify-center">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -56,7 +56,7 @@ export default function ContactSection() {
         </div>
 
         <motion.div
-          className="w-full max-w-2xl mx-auto bg-gradient-to-r from-gray-900 to-gray-700 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition duration-300 text-gray-100"
+          className="w-full max-w-2xl mx-auto bg-gradient-to-r from-blue-800 to-blue-700 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition duration-300 text-gray-100"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -71,7 +71,7 @@ export default function ContactSection() {
                 type="text"
                 name="name"
                 id="name"
-                className="w-full p-3 rounded-lg border border-gray-300 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                className="w-full p-3 rounded-lg border border-gray-300 bg-gray-50 text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 placeholder="Your Name"
                 required
               />
@@ -85,7 +85,7 @@ export default function ContactSection() {
                 type="email"
                 name="email"
                 id="email"
-                className="w-full p-3 rounded-lg border border-gray-300 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                className="w-full p-3 rounded-lg border border-gray-300 bg-gray-50 text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 placeholder="you@example.com"
                 required
               />
@@ -102,7 +102,7 @@ export default function ContactSection() {
                 name="message"
                 id="message"
                 rows={5}
-                className="w-full p-3 rounded-lg border border-gray-300 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                className="w-full p-3 rounded-lg border border-gray-300 bg-gray-50 text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 placeholder="Write your message here..."
                 required
               ></textarea>
@@ -111,7 +111,7 @@ export default function ContactSection() {
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-block w-full sm:w-auto bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+                className="inline-block w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
               >
                 Send Message
               </button>

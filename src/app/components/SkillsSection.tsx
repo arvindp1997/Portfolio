@@ -33,7 +33,7 @@ export default function SkillsSection() {
   };
 
   return (
-    <div className="min-h-screen p-4 sm:p-6 md:p-10 bg-gradient-to-r from-gray-800 to-gray-600">
+    <div className="min-h-screen p-4 sm:p-6 md:p-10 bg-gradient-to-r form-blue-800 to-blue-600">
       <h2 className="text-xl sm:text-2xl font-bold text-gray-100 mb-6">
         Technical Expertise
       </h2>
@@ -57,7 +57,7 @@ export default function SkillsSection() {
             <SkillCard
               title={section.title}
               skills={section.skills}
-              bgClass="from-gray-900 to-gray-700"
+              bgClass="from-blue-800 to-blue-700"
             />
           </motion.div>
         ))}

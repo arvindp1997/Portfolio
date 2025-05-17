@@ -9,7 +9,7 @@ export default function PortfolioApp() {
 
   return (
     <div className="bg-gray-200 shadow-lg p-2">
-      <div className="mx-auto bg-gray-600 shadow-lg overflow-hidden">
+      <div className="mx-auto bg-blue-600 shadow-lg overflow-hidden">
         <div className="flex flex-col md:flex-row">
           {/* Sidebar */}
           <div className="md:w-1/4">

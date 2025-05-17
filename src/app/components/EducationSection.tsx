@@ -40,7 +40,7 @@ export default function EducationSection() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-800 to-gray-600 p-4 h-full">
+    <div className="bg-gradient-to-r form-blue-800 to-blue-600 p-4 h-full">
       <h2 className="text-2xl font-bold text-gray-100 mb-6">Education</h2>
 
       <div className="space-y-6">

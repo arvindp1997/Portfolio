@@ -85,7 +85,7 @@ export default function ExperienceSection() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-800 to-gray-600 p-4">
+    <div className="bg-gradient-to-r form-blue-800 to-blue-600 p-4">
       <h2 className="text-2xl font-bold text-gray-100 mb-6">Work Experience</h2>
 
       <div className="space-y-6">

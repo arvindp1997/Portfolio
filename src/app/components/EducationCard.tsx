@@ -11,10 +11,10 @@ type Education = {
   }; 
 export default function EducationCard({ education }: EducationCardProps) {
   return (
-    <div className="bg-gradient-to-r from-gray-900 to-gray-700 rounded-lg p-6 shadow-lg hover:shadow-md transition duration-300">
+    <div className="bg-gradient-to-r from-blue-800 to-blue-700 rounded-lg p-6 shadow-lg hover:shadow-md transition duration-300">
       <div className="flex flex-wrap justify-between items-start mb-3">
         <h3 className="text-xl font-bold text-gray-100">{education.degree}</h3>
-        <span className="bg-gray-800 text-gray-100 text-xs font-medium px-2.5 py-0.5 rounded">
+        <span className="bg-blue-800 text-gray-100 text-xs font-medium px-2.5 py-0.5 rounded">
           {education.year}
         </span>
       </div>
@@ -22,7 +22,7 @@ export default function EducationCard({ education }: EducationCardProps) {
       <div className="mb-3">
         <div className="flex items-center mb-1">
           <svg
-            className="w-4 h-4 text-gray-500 mr-1"
+            className="w-4 h-4 text-gray-100 mr-1"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -41,7 +41,7 @@ export default function EducationCard({ education }: EducationCardProps) {
 
         <div className="flex items-center">
           <svg
-            className="w-4 h-4 text-gray-500 mr-1"
+            className="w-4 h-4 text-gray-100 mr-1"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

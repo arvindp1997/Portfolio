@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection({ setActiveTab }: { setActiveTab: (val: string) => void }) {
   return (
-    <section className="bg-gradient-to-r from-gray-800 to-gray-600 min-h-screen text-white flex items-center">
+    <section className="bg-gradient-to-r form-blue-800 to-blue-600 min-h-screen text-white flex items-center">
       <div className="container mx-auto px-4 sm:px-6 py-20 md:py-24 relative z-10">
         <motion.div
           className="w-full md:w-3/4 lg:w-2/3"

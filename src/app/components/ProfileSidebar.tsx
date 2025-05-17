@@ -9,7 +9,7 @@ export default function ProfileSidebar() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-800 to-gray-600  w-full p-6 text-white h-full ">
+    <div className="bg-gradient-to-r from-blue-800 to-blue-600  w-full p-6 text-white h-full ">
       <div className="flex flex-col items-center mb-6">
         <div className="w-32 h-32 bg-gray-500 rounded-full mb-4 flex items-center justify-center">
           <Image
@@ -25,7 +25,7 @@ export default function ProfileSidebar() {
       </div>
 
       <div className="mb-6">
-        <h3 className="text-lg font-semibold mb-2 border-b border-gray-700 pb-2">
+        <h3 className="text-lg font-semibold mb-2 border-b border-gray-100 pb-2">
           Contact
         </h3>
         <div className="flex items-center mb-2">

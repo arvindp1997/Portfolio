@@ -51,7 +51,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-gray-800 to-gray-600 p-4">
+    <section className="bg-gradient-to-r form-blue-800 to-blue-600 p-4">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-100 mb-4">

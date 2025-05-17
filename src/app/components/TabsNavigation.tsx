@@ -22,10 +22,10 @@ export default function TabsNavigation({ activeTab, setActiveTab }: TabsNavigati
         <button
           key={tab.id}
           onClick={() => setActiveTab(tab.id)}
-          className={`pb-4 px-1 font-medium text-sm whitespace-nowrap ${
+          className={`pb-4 px-1  text-sm whitespace-nowrap ${
             activeTab === tab.id
-              ? "text-gray-200 border-b-2 border-white"
-              : "text-gray-100 hover:text-gray-400"
+              ? "text-gray-200 border-b-2 border-white font-bold"
+              : "text-gray-100 hover:text-gray-400 font-medium"
           }`}
         >
           {tab.label}

@@ -34,12 +34,12 @@ body {
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: darkgray; /* Color of scrollbar thumb */
+    background-color: lightgray; /* Color of scrollbar thumb */
     border-radius: 8px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: lightgray; /* Color on hover */
+    background-color: white; /* Color on hover */
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
