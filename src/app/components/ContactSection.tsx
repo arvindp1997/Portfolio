@@ -42,7 +42,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-gradient-to-r form-blue-800 to-blue-600 p-4 sm:p-6 md:p-8 min-h-screen flex items-center justify-center">
+    <section className="bg-gradient-to-r from-blue-800 to-blue-600 p-4 sm:p-6 md:p-8 min-h-screen flex items-center justify-center">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
