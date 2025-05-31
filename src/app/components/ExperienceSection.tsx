@@ -9,7 +9,7 @@ export default function ExperienceSection() {
       period: "Jan 2025 - Present",
       location: "Gurgaon - Onsite",
       client: "Mckinsey & Company",
-      project: "Source AI project",
+      project: "Worked on the development of Source AI, an AI-powered Category Management SaaS platform for procurement teams",
       tech: ["ReactJs", "NextJs", "TypeScript", "Javascript", "Jest", "Cypress"],
     },
     {
