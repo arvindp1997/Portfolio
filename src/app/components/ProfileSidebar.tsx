@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ProfileSidebar() {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/CV.pdf'; // path to your CV file in the public folder
+    link.href = '/Aravind_Pandit_Updated_Resume.pdf'; // path to your CV file in the public folder
     link.download = 'Aravind_Pandit_UpdatedCV.pdf'; // specify the file name
     link.click();
   };
